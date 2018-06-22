@@ -1,0 +1,9 @@
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\bin\Debug\netcoreapp2.0\GP.deps.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\bin\Debug\netcoreapp2.0\GP.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\bin\Debug\netcoreapp2.0\GP.pdb
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\obj\Debug\netcoreapp2.0\GP.csproj.CoreCompileInputs.cache
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\obj\Debug\netcoreapp2.0\GP.AssemblyInfoInputs.cache
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\obj\Debug\netcoreapp2.0\GP.AssemblyInfo.cs
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\obj\Debug\netcoreapp2.0\GP.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\obj\Debug\netcoreapp2.0\GP.pdb
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP\obj\Debug\netcoreapp2.0\GP.csprojResolveAssemblyReference.cache

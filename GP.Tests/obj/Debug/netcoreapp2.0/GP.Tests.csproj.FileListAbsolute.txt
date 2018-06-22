@@ -1,0 +1,17 @@
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\GP.Tests.deps.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\GP.Tests.runtimeconfig.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\GP.Tests.runtimeconfig.dev.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\GP.Tests.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\GP.Tests.pdb
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\GP.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\bin\Debug\netcoreapp2.0\GP.pdb
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\obj\Debug\netcoreapp2.0\GP.Tests.csprojResolveAssemblyReference.cache
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\obj\Debug\netcoreapp2.0\GP.Tests.csproj.CoreCompileInputs.cache
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\obj\Debug\netcoreapp2.0\GP.Tests.AssemblyInfoInputs.cache
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\obj\Debug\netcoreapp2.0\GP.Tests.AssemblyInfo.cs
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\obj\Debug\netcoreapp2.0\GP.Tests.csproj.CopyComplete
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\obj\Debug\netcoreapp2.0\GP.Tests.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Tests\obj\Debug\netcoreapp2.0\GP.Tests.pdb
