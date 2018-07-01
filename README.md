@@ -1,4 +1,4 @@
-# Implementation of Gaussian Processes using .NET Core
+# .NET Core implementation of Gaussian Processes
 
 ### Objective function approximation:
 
