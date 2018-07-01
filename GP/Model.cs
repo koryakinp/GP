@@ -39,6 +39,10 @@ namespace GP
 
         private ModelResult ComputeResult(AquisitionFunction af, int queries)
         {
+            _gp.AddDataPoint(new DataPoint(Xs[0], Query(Xs[0])));
+            _gp.AddDataPoint(new DataPoint(Xs[Xs.Length - 1], Query(Xs[Xs.Length - 1])));
+
+
             for (int i = 0; i < queries; i++)
             {
                 var nextX = af.GetNextQueryPoint();

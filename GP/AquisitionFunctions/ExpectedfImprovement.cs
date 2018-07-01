@@ -20,6 +20,11 @@ namespace GP.AquisitionFunctions
                 ? Gp.Data.Max(q => q.FX)
                 : Gp.Data.Min(q => q.FX);
 
+            if(Gp.Data.Any(q => q.X == er.X))
+            {
+                return new AquisitionFunctionValue(er.X, 0);
+            }
+
             var delta = er.Mean - best;
             var sigma = er.UpperBound - er.LowerBound;
 
@@ -27,6 +32,7 @@ namespace GP.AquisitionFunctions
             var secondTerm = Math.Abs(delta) * Normal.CDF(0, 1, -1 * Math.Abs(delta) / sigma);
 
             var next = delta + firstTerm - secondTerm;
+
             return new AquisitionFunctionValue(er.X, Math.Max(next, 0));
         }
     }

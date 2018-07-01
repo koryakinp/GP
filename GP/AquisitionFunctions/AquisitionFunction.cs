@@ -18,6 +18,7 @@ namespace GP.AquisitionFunctions
 
         protected double GetRandomQueryPoint()
         {
+            return Xs[400];
             return Xs[new Random().Next(0, Xs.Length - 1)];
         }
 

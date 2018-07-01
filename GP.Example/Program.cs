@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MathNet.Numerics;
 using Newtonsoft.Json;
 using GP.AquisitionFunctions;
+using GP.Result;
 
 namespace GP.Example
 {
@@ -14,18 +15,38 @@ namespace GP.Example
     {
         static void Main(string[] args)
         {
-            //var t1 = new Task(() =>
-            //{
-            //    Console.WriteLine("Start");
-            //    RunCmd("script.py", new string[] { "predicted.json", "observed.json" });
-            //    Console.WriteLine("End");
-            //});
 
-            //t1.Start();
+            for (int i = 0; i < 12; i++)
+            {
+                Run(i);
+            }
 
+            Console.WriteLine("Press any key to quit");
+            Console.ReadLine();
+        }
+
+        private static void RunCmd(string cmd, string[] args)
+        {
+            ProcessStartInfo start = new ProcessStartInfo();
+            start.FileName = @"C:\Users\pavelkoryakin\Anaconda3\python.exe";
+            start.Arguments = string.Format("{0} {1}", cmd, string.Join(' ', args));
+            start.UseShellExecute = false;
+            start.RedirectStandardOutput = true;
+            using (Process process = Process.Start(start))
+            {
+                using (StreamReader reader = process.StandardOutput)
+                {
+                    string result = reader.ReadToEnd();
+                    Console.Write(result);
+                }
+            }
+        }
+
+        private static void Run(int quries)
+        {
             var kernel = new GaussianKernel(1, 1);
-            var model = new Model(kernel, 0, 3, 300, (q) => Trig.Sin(q));
-            var output = model.FindExtrema(Goal.Max, 8);
+            var model = new Model(kernel, 0, 8, 800, (q) => ObjectiveFunction(q));
+            var output = model.FindExtrema(Goal.Max, quries);
 
             var er = output.EstimationValues
                 .Select(q => new double[] { q.Mean, q.UpperBound, q.LowerBound, q.X })
@@ -48,32 +69,18 @@ namespace GP.Example
             var json3 = JsonConvert.SerializeObject(af, Formatting.Indented);
             File.WriteAllText("aquisition_test.json", json3);
 
-            RunCmd("script.py", new string[] 
+            RunCmd("script.py", new string[]
             {
                 "predicted_test.json",
                 "observed_test.json",
-                "aquisition_test.json"
+                "aquisition_test.json",
+                $"{quries}.png"
             });
-
-            Console.WriteLine("Press any key to quit");
-            Console.ReadLine();
         }
 
-        private static void RunCmd(string cmd, string[] args)
+        private static double ObjectiveFunction(double x)
         {
-            ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = @"C:\Users\pavelkoryakin\Anaconda3\python.exe";
-            start.Arguments = string.Format("{0} {1}", cmd, string.Join(' ', args));
-            start.UseShellExecute = false;
-            start.RedirectStandardOutput = true;
-            using (Process process = Process.Start(start))
-            {
-                using (StreamReader reader = process.StandardOutput)
-                {
-                    string result = reader.ReadToEnd();
-                    Console.Write(result);
-                }
-            }
+            return -x * Trig.Cos(-2 * x) * Math.Exp(-x / 3);
         }
     }
 }
