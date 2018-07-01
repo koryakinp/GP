@@ -28,11 +28,8 @@ namespace GP.AquisitionFunctions
             var delta = er.Mean - best;
             var sigma = er.UpperBound - er.LowerBound;
 
-            var firstTerm = sigma * Normal.PDF(0, 1, delta / sigma);
-            var secondTerm = Math.Abs(delta) * Normal.CDF(0, 1, -1 * Math.Abs(delta) / sigma);
-
-            var next = delta + firstTerm - secondTerm;
-
+            var z = delta / sigma;
+            var next = delta * Normal.CDF(0, 1, z) + sigma * Normal.PDF(0, 1, z);
             return new AquisitionFunctionValue(er.X, Math.Max(next, 0));
         }
     }

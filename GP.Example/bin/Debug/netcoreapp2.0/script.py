@@ -19,7 +19,7 @@ def plot(predicted, observed, aquistition, objective, filename):
 	ax0 = plt.subplot(gs[0], title="Posterior distribution")
 	ax0.plot(predicted['x'], predicted['mean'], label='Mean')
 	ax0.plot(objective['x'], objective['y'], '--', color='gray', label='Objective function')
-	ax0.plot(observed['x'], observed['y'], 'o', ms=5, color='black', label='Observed values')
+	ax0.plot(observed['x'], observed['y'], 'o', ms=10, mfc='white', mec='blue', mew=2, label='Observed values')
 	ax0.fill_between(predicted['x'], predicted['lower'], predicted['upper'], color="lightblue")
 	ax0.axvline(x=next_query_point, label='Next Query Point', color='red')
 	ax0.legend(loc='upper right')
