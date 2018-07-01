@@ -39,7 +39,7 @@ namespace GP
 
         private ModelResult ComputeResult(AquisitionFunction af, int queries)
         {
-            for (int i = 0; i < Xs.Length; i++)
+            for (int i = 0; i < queries; i++)
             {
                 var nextX = af.GetNextQueryPoint();
                 if (!_gp.Data.Any(q => q.X == nextX))

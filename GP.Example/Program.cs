@@ -25,7 +25,7 @@ namespace GP.Example
 
             var kernel = new GaussianKernel(1, 1);
             var model = new Model(kernel, 0, 3, 300, (q) => Trig.Sin(q));
-            var output = model.FindExtrema(Goal.Max, 2);
+            var output = model.FindExtrema(Goal.Max, 8);
 
             var er = output.EstimationValues
                 .Select(q => new double[] { q.Mean, q.UpperBound, q.LowerBound, q.X })

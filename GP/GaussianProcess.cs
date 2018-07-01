@@ -65,7 +65,7 @@ namespace GP
                 .Multiply(ks);
 
             var mu = common.DotProduct(f);
-            var confidence = -common.DotProduct(ks) + _kernel.Compute(x, x);
+            var confidence = Math.Abs(-common.DotProduct(ks) + _kernel.Compute(x, x));
 
             return new EstimationResult(mu, confidence, x);
         }
