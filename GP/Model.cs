@@ -33,7 +33,7 @@ namespace GP
 
         public ModelResult FindExtrema(Goal goal, int queries)
         {
-            var af = new ProbabilityOfImprovement(goal, _gp, Xs);
+            var af = new ExpectedfImprovement(goal, _gp, Xs);
             return ComputeResult(af, queries);
         }
 

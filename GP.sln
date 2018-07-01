@@ -13,11 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GP.Example", "GP.Example\GP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GP.Example", "GP.Example", "{5091E009-8769-40C8-A000-9D6489B1760B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GP.Animation", "GP.Animation", "{23B2CD7E-AC4E-44D9-B895-87FF0A153C47}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\ml\New folder\gp-explore.gif = ..\..\..\..\Desktop\ml\New folder\gp-explore.gif
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

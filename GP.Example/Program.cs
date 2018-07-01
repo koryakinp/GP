@@ -16,7 +16,7 @@ namespace GP.Example
         static void Main(string[] args)
         {
 
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 15; i++)
             {
                 Run(i);
             }
@@ -44,9 +44,9 @@ namespace GP.Example
 
         private static void Run(int quries)
         {
-            var kernel = new GaussianKernel(1, 1);
-            var model = new Model(kernel, 0, 8, 800, (q) => ObjectiveFunction(q));
-            var output = model.FindExtrema(Goal.Max, quries);
+            var kernel = new GaussianKernel(0.25, 1);
+            var model = new Model(kernel, 0, 8, 800, ObjectiveFunction);
+            var output = model.Explore(quries);
 
             var er = output.EstimationValues
                 .Select(q => new double[] { q.Mean, q.UpperBound, q.LowerBound, q.X })
