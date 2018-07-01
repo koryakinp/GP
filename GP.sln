@@ -9,9 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GP.Tests", "GP.Tests\GP.Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GP.Tests", "GP.Tests", "{745175E9-5355-4C31-B4D5-7C9B775602B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GP.Example", "GP.Example\GP.Example.csproj", "{B20A6AFF-80F7-4919-B2E7-EB92D1E6EB8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GP.Example", "GP.Example\GP.Example.csproj", "{B20A6AFF-80F7-4919-B2E7-EB92D1E6EB8C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GP.Example", "GP.Example", "{5091E009-8769-40C8-A000-9D6489B1760B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GP.Animation", "GP.Animation", "{23B2CD7E-AC4E-44D9-B895-87FF0A153C47}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\ml\New folder\gp-explore.gif = ..\..\..\..\Desktop\ml\New folder\gp-explore.gif
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
