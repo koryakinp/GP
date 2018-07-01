@@ -7,5 +7,5 @@
 ```
 var kernel = new GaussianKernel(0.25, 1);
 var model = new Model(kernel, 0, 8, 800, Math.Sin);
-var output = model.Explore(quries);
+var output = model.Explore(10);
 ```
