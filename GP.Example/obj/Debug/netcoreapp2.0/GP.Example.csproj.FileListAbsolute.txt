@@ -1,0 +1,17 @@
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\GP.Example.deps.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\GP.Example.runtimeconfig.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\GP.Example.runtimeconfig.dev.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\GP.Example.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\GP.Example.pdb
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\obj\Debug\netcoreapp2.0\GP.Example.csproj.CoreCompileInputs.cache
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\obj\Debug\netcoreapp2.0\GP.Example.AssemblyInfoInputs.cache
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\obj\Debug\netcoreapp2.0\GP.Example.AssemblyInfo.cs
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\obj\Debug\netcoreapp2.0\GP.Example.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\obj\Debug\netcoreapp2.0\GP.Example.pdb
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\script.py
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\observed.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\predicted.json
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\obj\Debug\netcoreapp2.0\GP.Example.csprojResolveAssemblyReference.cache
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\GP.dll
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\bin\Debug\netcoreapp2.0\GP.pdb
+C:\Users\pavelkoryakin\Documents\Visual Studio 2017\Projects\GP\GP.Example\obj\Debug\netcoreapp2.0\GP.Example.csproj.CopyComplete

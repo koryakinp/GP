@@ -1,89 +1,57 @@
-﻿using GP.Kernels;
-using MathNet.Numerics.LinearAlgebra;
+﻿using GP.AquisitionFunctions;
+using GP.Kernels;
+using GP.Result;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace GP
 {
     public class Model
     {
-        private readonly Kernel _kernel;
-        private readonly List<DataPoint> _data;
-        private Matrix<double> _covariance;
+        private readonly GaussianProcess _gp;
+        private readonly Func<double, double> Query;
+        private readonly double[] Xs;
 
-        public Model(Kernel kernel)
+        public Model(
+            Kernel kernel, 
+            double min, 
+            double max, 
+            int resolution, 
+            Func<double, double> query)
         {
-            _kernel = kernel;
-            _data = new List<DataPoint>();
-            _covariance = Matrix<double>.Build.Dense(1, 1);
+            _gp = new GaussianProcess(kernel);
+            Query = query;
+            Xs = new double[resolution];
+            Xs.ForEach((i, q) => Xs[i] = min + i * (max - min) / (resolution - 1));
         }
 
-        public void AddDataPoint(DataPoint dataPoint)
+        public ModelResult Explore(int queries)
         {
-            if (_data.Any(q => q.X == dataPoint.X))
-            {
-                throw new InvalidOperationException(Consts.ModelAlreadyContainsDataPoint);
-            }
-
-            _data.Add(dataPoint);
-
-            int size = _data.Count;
-            var updated = Matrix<double>.Build.Dense(size, size);
-            _covariance.ForEach((i, j, q) => updated[i, j] = q);
-
-            for (int i = 0; i < size - 1; i++)
-            {
-                var value = _kernel.Compute(_data[i].X, dataPoint.X);
-                updated[i, size - 1] = value;
-                updated[size - 1, i] = value;
-            }
-
-            updated[size - 1, size - 1] = _kernel.Compute(dataPoint.X, dataPoint.X);
-            _covariance = updated;
+            var af = new Explorer(_gp, Xs);
+            return ComputeResult(af, queries);
         }
 
-        public List<EstimationResult> EstimateAtRange(double min, double max, int numberOfPoints)
+        public ModelResult FindExtrema(Goal goal, int queries)
         {
-            if(!_data.Any(q => q.X == min))
-            {
-                throw new InvalidOperationException(Consts.DataPointStartMissing);
-            }
-
-            if(!_data.Any(q => q.X == max))
-            {
-                throw new InvalidOperationException(Consts.DataPointEndMissing);
-            }
-
-            double[] xs = new double[numberOfPoints];
-            xs.ForEach((i, q) => xs[i] = min + i*(max - min) / (numberOfPoints - 1));
-
-            List<EstimationResult> res = new List<EstimationResult>();
-            xs.ForEach((i, q) => res.Add(EstimateAtPoint(q)));
-            return res;
+            var af = new ProbabilityOfImprovement(goal, _gp, Xs);
+            return ComputeResult(af, queries);
         }
 
-        public EstimationResult EstimateAtPoint(double x)
+        private ModelResult ComputeResult(AquisitionFunction af, int queries)
         {
-            var kStar = _data.Select((q, i) => _kernel.Compute(x, q.X)).ToArray();
-            var fValues = _data.Select(q => q.FX).ToArray();
+            for (int i = 0; i < Xs.Length; i++)
+            {
+                var nextX = af.GetNextQueryPoint();
+                if (!_gp.Data.Any(q => q.X == nextX))
+                {
+                    _gp.AddDataPoint(new DataPoint(nextX, Query(nextX)));
+                }
+            }
 
-            var ks = Vector<double>.Build.Dense(kStar);
-            var f = Vector<double>.Build.Dense(fValues);
-
-            var common = GetCovariance()
-                .Inverse()
-                .Multiply(ks);
-
-            var mu = common.DotProduct(f);
-            var confidence = -common.DotProduct(ks) + _kernel.Compute(x, x);
-
-            return new EstimationResult(mu, confidence);
-        }
-
-        internal Matrix<double> GetCovariance()
-        {
-            return _covariance;
+            return new ModelResult(
+                _gp.EstimateAtRange(Xs),
+                _gp.Data,
+                af.GetAquisitionFunctionValues());
         }
     }
 }

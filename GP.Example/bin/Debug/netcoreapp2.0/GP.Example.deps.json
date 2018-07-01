@@ -1,0 +1,79 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "63623bfffae9719b88eb2720f5ed7b4522c20d3a"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "GP.Example/1.0.0": {
+        "dependencies": {
+          "GP": "1.0.0",
+          "MathNet.Numerics": "4.5.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "GP.Example.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.5.1": {
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Stats.Koryakinp/2.0.0": {
+        "runtime": {
+          "lib/netcoreapp2.0/Stats.dll": {}
+        }
+      },
+      "GP/1.0.0": {
+        "dependencies": {
+          "MathNet.Numerics": "4.5.1",
+          "Newtonsoft.Json": "11.0.2",
+          "Stats.Koryakinp": "2.0.0"
+        },
+        "runtime": {
+          "GP.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GP.Example/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MathNet.Numerics/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GOjrYhkAbzrObW8SG5X42ET0nbAAsJmJ3edBLk58dbHbiXeA0hZReqVYfRZTsqB/yYZhK8lgDliZjGKnk/gGhg==",
+      "path": "mathnet.numerics/4.5.1",
+      "hashPath": "mathnet.numerics.4.5.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "Stats.Koryakinp/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jVeMkSRBsz0P1Lv45WtmC5vKqpZESsBlrV/0JnA2f0IcpARqNkHSFOjL6kYKWNFiy+q1P73Ml9QdCNpPxAWOyA==",
+      "path": "stats.koryakinp/2.0.0",
+      "hashPath": "stats.koryakinp.2.0.0.nupkg.sha512"
+    },
+    "GP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
